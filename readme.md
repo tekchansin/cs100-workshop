@@ -50,8 +50,8 @@ EOF
 
 ## Deploy Ceph-ansible
 ```
-cd /opt/cs100
-ansible-playbook -b -i hosts.ini ceph-ansible/site-docker.yml.sample 
+cd /opt/cs100/ceph-ansible
+ansible-playbook -b -i ../hosts.ini site-docker.yml.sample
 ```
 
 # Configuration

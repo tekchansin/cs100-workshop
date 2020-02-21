@@ -108,8 +108,8 @@ dashboard_enabled: True
 # For https, you should set dashboard.crt/key and grafana.crt/key
 #dashboard_protocol: http
 # dashboard_port: 8443
-# dashboard_admin_user: admin
-# dashboard_admin_password: p@ssw0rd
+dashboard_admin_user: admin
+dashboard_admin_password: p@ssw0rd
 # We only need this for SSL (https) connections
 #dashboard_crt: ''
 #dashboard_key: ''
