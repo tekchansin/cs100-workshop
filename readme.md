@@ -8,6 +8,7 @@
 - prometheus: 9091
 - mgr: 9283
 - dashboard: 8443
+- object s3: 8080
 
 # Installation
 ### Checkout code
