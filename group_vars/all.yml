@@ -51,12 +51,7 @@ osd_pool_default_size: 2
 osd_pool_default_min_size: 1
 #mds_max_mds: 1
 devices:   
-  - '/dev/sdd'
-  - '/dev/sde'
-  - '/dev/sdf'
-  - '/dev/sdg'
-  - '/dev/sdh'
-  - '/dev/sdi'
+  - '/dev/vdb'
 
 ## Rados Gateway options
 #

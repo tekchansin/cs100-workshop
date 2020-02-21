@@ -2,21 +2,24 @@
 - ubuntu 18.04
 - ceph-ansible tag: v4.0.15
 
-# Run kolla-ansible Bootstap server first!!!!!!!
-
 # Installation
 ### Checkout code
 ```
-git clone git@github.com:tekchansin/cs100-workshop.git /opt/cs100
+git clone https://github.com/tekchansin/cs100-workshop.git /opt/cs100
 cd /opt/cs100
-git submodule init --update
+git submodule update --init
+```
+### Install dependency
+```
+apt update
+apt install python-pip virtualenv -y
 ```
 
 ### Setup Environment:
 ```
 virtualenv /opt/cephenv --system-site-packages
 source /opt/cephenv/bin/activate
-pip install -r /opt/ncp-deployment/ceph-ansible/requirements.txt
+pip install -r /opt/cs100/ceph-ansible/requirements.txt
 ```
 
 ### Clean device before join cluster
@@ -25,11 +28,30 @@ pip install -r /opt/ncp-deployment/ceph-ansible/requirements.txt
 ```
 wipefs -a /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdh /dev/sdi
 ```
+### Generate key on deploy node
+```
+ssh-keygen
+```
+
+### copy public key to other node
+```
+cat ~/.ssh/id_rsa.pub > /home/nc-user/.ssh/authorized_keys
+```
+### Configure Ansible
+```
+mkdir /etc/ansible
+cat > /etc/ansible/ansible.cfg <<EOF
+[defaults]
+host_key_checking=False
+pipelining=True
+forks=100
+EOF
+```
 
 ## Deploy Ceph-ansible
 ```
 cd /opt/cs100
-ansible-playbook -i hosts.ini ceph-ansible/site-docker.yml.sample 
+ansible-playbook -b -i hosts.ini ceph-ansible/site-docker.yml.sample 
 ```
 
 # Configuration
