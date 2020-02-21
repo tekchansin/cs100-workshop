@@ -2,7 +2,8 @@
 ##########
 # DOCKER #
 ##########
-ceph_docker_image_tag: "14.2.6-nautilus-centos-7-x86_64"
+#https://hub.docker.com/r/ceph/daemon
+ceph_docker_image_tag: "v4.0.10-stable-4.0-nautilus-centos-7-x86_64"
 ######################
 # Core Configuration #
 ######################
