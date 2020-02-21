@@ -104,6 +104,7 @@ nfs_obj_gw: true
 #############
 # DASHBOARD #
 #############
+grafana_server_addr: 103.74.254.44
 dashboard_enabled: True
 # Choose http or https
 # For https, you should set dashboard.crt/key and grafana.crt/key

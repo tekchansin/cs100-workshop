@@ -2,6 +2,13 @@
 - ubuntu 18.04
 - ceph-ansible tag: v4.0.15
 
+### Port
+- grafana: 3000
+- node exporter: 9100
+- prometheus: 9091
+- mgr: 9283
+- dashboard: 8443
+
 # Installation
 ### Checkout code
 ```
@@ -52,6 +59,12 @@ EOF
 ```
 cd /opt/cs100/ceph-ansible
 ansible-playbook -b -i ../hosts.ini site-docker.yml.sample
+```
+
+## exec to ceph mgr for check health
+```
+docker exec -it ceph-mgr-cephansible-1 bash
+ceph -s
 ```
 
 # Configuration
