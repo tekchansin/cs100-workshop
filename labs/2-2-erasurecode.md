@@ -1,7 +1,3 @@
-## Set Replica Size
-- ceph osd pool set <pool-name> size 2
-- ceph osd pool set <pool-name> min_size 1  
-
 ### Get erasure code profile
 - ceph osd erasure-code-profile ls
 - ceph osd erasure-code-profile get default
