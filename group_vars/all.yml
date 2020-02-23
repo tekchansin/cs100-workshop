@@ -16,13 +16,13 @@ radosgw_address_block: "10.148.0.0/24"
 mon_use_fqdn: false
 containerized_deployment: True
 configure_firewall: false
-ceph_conf_local: false
+ceph_conf_local: true
 nfs_ganesha_stable: true # use stable repos for nfs-ganesha
 nfs_ganesha_stable_branch: V2.7-stable
-# ceph_conf_overrides: 
-#   osd:
-#     osd_op_num_shards: 64
-#     osd_op_num_threads_per_shard: 1
+ceph_conf_overrides: 
+  osd:
+    osd_op_num_shards: 64
+    osd_op_num_threads_per_shard: 1
 
 ###########################
 # Resource Limit & Tuning #
