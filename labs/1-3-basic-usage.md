@@ -4,7 +4,7 @@ ceph osd pool set <pool-name> size <size>
 
 # Manage pool
 ### Create pool
-ceph osd pool create pool <pool-name> <pg-size>
+ceph osd pool create <pool-name> <pg-size>
 
 ### Pool detail
 ceph osd pool ls detail
