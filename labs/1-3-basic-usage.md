@@ -1,17 +1,17 @@
 # Change size (replication factor)
-ceph osd pool set <pool-name> min_size <min-size>
-ceph osd pool set <pool-name> size <size>
+ceph osd pool set {pool-name} min_size {min-size}
+ceph osd pool set {pool-name} size {size}
 
 # Manage pool
 ### Create pool
-ceph osd pool create <pool-name> <pg-size>
+ceph osd pool create {pool-name} {pg-size}
 
 ### Pool detail
 ceph osd pool ls detail
 
 ### Change size (replication factor)
-- ceph osd pool set <pool-name> min_size <min-size>
-- ceph osd pool set <pool-name> size <size>
+- ceph osd pool set {pool-name} min_size {min-size}
+- ceph osd pool set {pool-name} size {size}
 
 ### Check health
 - ceph osd pool ls detail
@@ -21,10 +21,10 @@ ceph osd pool ls detail
 - ceph osd pool create cs100 8
 
 ### Rename Pool
-- ceph osd pool rename <poolname> <newpoolname>
+- ceph osd pool rename {poolname} {newpoolname}
 
 ### Remove Pool
-- ceph osd pool rm <pool-name> <pool-name> --yes-i-really-really-mean-it
+- ceph osd pool rm {pool-name} {pool-name} --yes-i-really-really-mean-it
 
 
 ### Initialize Pool
@@ -59,5 +59,5 @@ ceph osd pool ls detail
 - mkdir /mnt/cs100-foo
 - mount /dev/rbd/cs100/foo /mnt/cs100-foo
 - cd /mnt/cs100-foo/
-- echo "Test write text on file" > ./file.txt
+- echo "Test write text on file" } ./file.txt
 - ls -la

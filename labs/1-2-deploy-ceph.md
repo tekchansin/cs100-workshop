@@ -3,7 +3,7 @@
 - ansible-playbook -i ../hosts.ini site.yml
 
 ### Check ceph health status
-- docker exec -it <mgr-container> bash
+- docker exec -it {mgr-container} bash
 - ceph -s
 - health status should be "HEALTH_OK"
 

@@ -9,4 +9,4 @@
 - ceph osd erasure-code-profile set {profile-name} crush-failure-domain=rack,k=2,m=1 (--force)
 
 ### Create erasurecode pool 
-- ceph osd pool create <pool-name> <pg> erasure <profile>
+- ceph osd pool create {pool-name} {pg} erasure {profile}

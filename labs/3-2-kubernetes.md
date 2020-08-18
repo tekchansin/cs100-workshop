@@ -55,4 +55,4 @@
 - df -h
 
 ### Check image on Ceph Pool
-- rbd info -p kube <image-id>
+- rbd info -p kube {image-id}
