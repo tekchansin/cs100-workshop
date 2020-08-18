@@ -13,3 +13,4 @@ parameters:
   pool: kube
   userId: kube
   userSecretName: ceph-user-secret
+  

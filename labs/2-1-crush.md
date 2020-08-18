@@ -10,8 +10,11 @@ ceph osd crush get-device-class <osd-id>
 
 ### Change class from HDD to SSD
 ceph osd crush rm-device-class <osd-id>
+
 ceph osd crush set-device-class ssd <osd-id>
+
 ceph osd crush get-device-class <osd-id>
+
 ceph osd tree
 
 ### create bucket 
