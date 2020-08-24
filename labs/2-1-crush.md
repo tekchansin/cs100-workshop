@@ -5,6 +5,9 @@
 ### Type of device class
 - ceph osd crush class ls
 
+### Create a new class
+- ceph osd crush class create ssd
+
 ### Get device class of osd-id
 - ceph osd crush get-device-class {osd-id}
 
