@@ -5,6 +5,7 @@
 ### Apply cache to data pool
 - ceph osd tier add {datapool} {cachepool}
 - ceph osd tier cache-mode {cachepool} writeback
+- ceph osd pool set {cachepool} hit_set_type bloom
 
 ## Remove cache
 ### Set readonly cache & flush write
